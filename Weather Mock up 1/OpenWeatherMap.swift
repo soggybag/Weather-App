@@ -26,7 +26,7 @@ class OpenWeatherMap {
     let openWeatherURL = "http://api.openweathermap.org/data/2.5/weather"
     
     // Variables used by the program
-    var cityName            = "San Francisco"
+    var cityName            = ""
     var weatherDescription  = ""
     var weatherTemp         = ""
     var weatherMinTemp      = ""
@@ -122,13 +122,11 @@ class OpenWeatherMap {
         return NSDate(timeIntervalSince1970: timeStamp)
     }
     
-    
     func formatDate(date: NSDate) -> String {
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateStyle = NSDateFormatterStyle.FullStyle
         return dateFormatter.stringFromDate(date)
     }
-    
     
     func cToF(tempC: Double) -> Double {
         return (tempC * 1.8) + 32
@@ -145,7 +143,6 @@ class OpenWeatherMap {
     
     
     func fixTempForDisplay(temp: Double) -> String {
-        
         println("Kelvin: \(temp)")
         println("C: \(temp - 273.15)")
         

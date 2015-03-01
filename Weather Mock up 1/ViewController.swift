@@ -10,7 +10,6 @@
 // Todo:
 // Need night images for weather icons
 
-
 import UIKit
 
 class ViewController: UIViewController, OpenWeatherMapDelegate {
